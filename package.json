@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "dev": "echo \"在浏览器中打开 index.html 查看网站\" && echo \"或使用: python -m http.server 8000\"",
+    "build": "node build.js",
     "test": "echo \"No tests specified\" && exit 0",
     "deploy": "powershell -ExecutionPolicy Bypass -File deploy-to-github.ps1",
-    "deploy:custom": "powershell -ExecutionPolicy Bypass -File deploy-to-github.ps1 -RepoName"
+    "deploy:custom": "powershell -ExecutionPolicy Bypass -File deploy-to-github.ps1 -RepoName",
+    "preview": "npm run build && echo \"构建完成！在 dist 目录查看网站文件\""
   },
   "keywords": ["opencode", "github", "automation"],
   "author": "dennykun-max",

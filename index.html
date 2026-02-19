@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCode 演示网站</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>OpenCode Demo</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#features">功能</a></li>
+                <li><a href="#demo">演示</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>欢迎使用 OpenCode 创建的网站</h1>
+                <p>这是一个完全由 AI 助手自动生成和部署的演示网站</p>
+                <div class="hero-buttons">
+                    <button class="btn primary" onclick="showMessage('开始探索!')">
+                        <i class="fas fa-play"></i> 开始探索
+                    </button>
+                    <button class="btn secondary" onclick="toggleTheme()">
+                        <i class="fas fa-moon"></i> 切换主题
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2>网站功能</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>快速部署</h3>
+                    <p>一键部署到 GitHub Pages，立即在线访问</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>响应式设计</h3>
+                    <p>适配手机、平板和桌面设备</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>交互功能</h3>
+                    <p>点击按钮、切换主题、实时反馈</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>自动化</h3>
+                    <p>GitHub Actions 自动构建和部署</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" class="demo">
+            <h2>交互演示</h2>
+            <div class="demo-container">
+                <div class="demo-card">
+                    <h3>计数器</h3>
+                    <div class="counter">
+                        <button class="counter-btn" onclick="decrement()">-</button>
+                        <span id="count">0</span>
+                        <button class="counter-btn" onclick="increment()">+</button>
+                    </div>
+                    <button class="btn" onclick="resetCounter()">重置</button>
+                </div>
+                
+                <div class="demo-card">
+                    <h3>消息发送</h3>
+                    <div class="message-input">
+                        <input type="text" id="messageInput" placeholder="输入消息...">
+                        <button class="btn" onclick="sendMessage()">发送</button>
+                    </div>
+                    <div class="message-display" id="messageDisplay">
+                        <p>等待消息...</p>
+                    </div>
+                </div>
+                
+                <div class="demo-card">
+                    <h3>主题切换</h3>
+                    <p>当前主题: <span id="themeStatus">明亮</span></p>
+                    <div class="theme-switcher">
+                        <button class="theme-btn light" onclick="setTheme('light')">明亮</button>
+                        <button class="theme-btn dark" onclick="setTheme('dark')">暗黑</button>
+                        <button class="theme-btn auto" onclick="setTheme('auto')">自动</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>关于此项目</h2>
+            <div class="about-content">
+                <p>这个网站完全由 OpenCode AI 助手自动创建和部署，展示了：</p>
+                <ul>
+                    <li>HTML5、CSS3 和 JavaScript 现代网页开发</li>
+                    <li>响应式设计和移动端适配</li>
+                    <li>GitHub Pages 静态网站托管</li>
+                    <li>GitHub Actions 自动化部署流程</li>
+                    <li>交互式 UI 组件和动态功能</li>
+                </ul>
+                <div class="github-info">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/dennykun-max/my-opencode-project" target="_blank">
+                        查看 GitHub 仓库
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 OpenCode 演示网站 | 由 AI 助手自动生成</p>
+        <p>部署时间: <span id="deployTime">正在加载...</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
