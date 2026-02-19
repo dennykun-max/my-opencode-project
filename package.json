@@ -1,1 +1,15 @@
-{"name":"my-opencode-project","version":"1.0.0","description":"A project created with OpenCode","main":"index.js"}
+{
+  "name": "my-opencode-project",
+  "version": "1.0.0",
+  "description": "A project created with OpenCode",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No tests specified\" && exit 0",
+    "deploy": "powershell -ExecutionPolicy Bypass -File deploy-to-github.ps1",
+    "deploy:custom": "powershell -ExecutionPolicy Bypass -File deploy-to-github.ps1 -RepoName"
+  },
+  "keywords": ["opencode", "github", "automation"],
+  "author": "dennykun-max",
+  "license": "MIT"
+}
